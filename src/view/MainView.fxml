@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="589.0" prefWidth="1106.0" style="-fx-background-color: BLACK;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+	<children>
+		<Label fx:id="songLabel" alignment="CENTER" layoutX="738.0" layoutY="122.0" prefHeight="70.0" prefWidth="356.0" text="MP3 Player" textFill="WHITE">
+			<font>
+				<Font size="30.0" />
+			</font>
+		</Label>
+		<ProgressBar fx:id="songProgressBar" layoutX="243.0" layoutY="481.0" prefHeight="18.0" prefWidth="480.0" progress="0.0" />
+		<Button fx:id="playButton" layoutX="379.0" layoutY="517.0" mnemonicParsing="false" onAction="#playSong" prefHeight="46.0" prefWidth="85.0" text="PLAY">
+			<font>
+				<Font size="18.0" />
+			</font>
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect>
+		</Button>
+		<Button fx:id="pauseButton" layoutX="513.0" layoutY="517.0" mnemonicParsing="false" onAction="#pauseSong" prefHeight="46.0" prefWidth="85.0" text="PAUSE">
+			<font>
+				<Font size="18.0" />
+			</font>
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect>
+		</Button>
+		<Button fx:id="resetButton" layoutX="110.0" layoutY="517.0" mnemonicParsing="false" onAction="#resetSong" prefHeight="46.0" prefWidth="85.0" text="RESET">
+			<font>
+				<Font size="18.0" />
+			</font>
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect>
+		</Button>
+		<Button fx:id="previousButton" layoutX="243.0" layoutY="517.0" mnemonicParsing="false" onAction="#previousSong" prefHeight="46.0" prefWidth="85.0" text="PREVIOUS">
+			<font>
+				<Font size="13.0" />
+			</font>
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect>
+		</Button>
+		<Button fx:id="nextButton" layoutX="640.0" layoutY="517.0" mnemonicParsing="false" onAction="#nextSong" prefHeight="46.0" prefWidth="85.0" text="NEXT">
+			<font>
+				<Font size="13.0" />
+			</font>
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect>
+		</Button>
+		<ComboBox fx:id="speedBox" layoutX="774.0" layoutY="517.0" onAction="#changeSpeed" prefHeight="46.0" prefWidth="79.0" promptText="SPEED">
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect></ComboBox>
+		<Slider fx:id="volumeSlider" layoutX="865.0" layoutY="533.0" max="100.0" prefHeight="14.0" prefWidth="212.0" value="50.0">
+         <effect>
+            <ColorAdjust />
+         </effect></Slider>
+      <ImageView fx:id="capa" fitHeight="178.0" fitWidth="327.0" layoutX="751.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="artistLabel" alignment="CENTER" layoutX="729.0" layoutY="208.0" prefHeight="70.0" prefWidth="356.0" text="Artist" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="albumLabel" alignment="CENTER" layoutX="733.0" layoutY="36.0" prefHeight="70.0" prefWidth="356.0" text="Album" textFill="WHITE">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="18.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Estilo de Música" textAlignment="CENTER" wrappingWidth="137.9999976158142">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Separator layoutX="24.0" layoutY="352.0" prefHeight="7.0" prefWidth="126.0">
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+         </effect>
+      </Separator>
+      <Separator layoutX="14.0" layoutY="4.0" prefHeight="0.0" prefWidth="1084.0">
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+         </effect>
+      </Separator>
+      <ListView layoutX="185.0" layoutY="84.0" prefHeight="318.0" prefWidth="513.0">
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect>
+      </ListView>
+      <Text fill="WHITE" layoutX="243.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PlayerMusic" textAlignment="CENTER" wrappingWidth="356.4453125">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Text>
+      <Separator layoutX="14.0" layoutY="574.0" prefHeight="0.0" prefWidth="1084.0">
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+         </effect>
+      </Separator>
+      <Separator layoutX="10.0" layoutY="3.0" orientation="VERTICAL" prefHeight="572.0" prefWidth="7.0">
+         <effect>
+            <ColorAdjust brightness="1.0" hue="0.04" saturation="1.0" />
+         </effect>
+      </Separator>
+      <Separator layoutX="1095.0" layoutY="4.0" orientation="VERTICAL" prefHeight="572.0" prefWidth="7.0">
+         <effect>
+            <ColorAdjust brightness="1.0" hue="0.04" saturation="1.0" />
+         </effect>
+      </Separator>
+      <Separator layoutX="24.0" layoutY="263.0" prefHeight="7.0" prefWidth="126.0">
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+         </effect>
+      </Separator>
+      <Separator layoutX="24.0" layoutY="200.0" prefHeight="7.0" prefWidth="126.0">
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+         </effect>
+      </Separator>
+      <Separator layoutX="156.0" layoutY="5.0" orientation="VERTICAL" prefHeight="411.0" prefWidth="7.0">
+         <effect>
+            <ColorAdjust brightness="1.0" hue="0.04" saturation="1.0" />
+         </effect>
+      </Separator>
+      <Separator layoutX="14.0" layoutY="413.0" prefHeight="7.0" prefWidth="147.0">
+         <effect>
+            <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+         </effect>
+      </Separator>
+      <Button layoutX="24.0" layoutY="161.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="126.0" text="Metal">
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect>
+      </Button>
+      <Button layoutX="24.0" layoutY="99.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="126.0" text="Sertanejo">
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect>
+      </Button>
+      <Button layoutX="24.0" layoutY="220.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="126.0" text="Pop">
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect>
+      </Button>
+      <Button layoutX="24.0" layoutY="278.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="126.0" text="Gospel">
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect>
+      </Button>
+      <Button layoutX="24.0" layoutY="336.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="126.0" text="Samba">
+         <effect>
+            <ColorAdjust hue="0.5" saturation="1.0" />
+         </effect>
+      </Button>
+	</children>
+</AnchorPane>
